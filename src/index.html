@@ -131,30 +131,34 @@
         /* Continuous Floating Animation */
         @keyframes float-up {
             0% {
-                transform: translateY(100px) rotate(0deg) scale(0.8);
+                transform: translateY(0px) rotate(0deg) scale(0.8);
                 opacity: 0;
             }
             10% {
-                opacity: 0.15;
+                opacity: 0.6;
             }
             90% {
-                opacity: 0.15;
+                opacity: 0.6;
             }
             100% {
-                transform: translateY(-800px) rotate(360deg) scale(1.2);
+                transform: translateY(-100vh) rotate(360deg) scale(1.2);
                 opacity: 0;
             }
         }
 
         .floating-item {
             position: absolute;
-            bottom: -50px;
+            bottom: -20%;
             animation: float-up infinite linear;
             opacity: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: theme('colors.primary.DEFAULT');
+            color: theme('colors.primary.dark');
+            background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.95), rgba(134, 239, 172, 0.4));
+            box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(34, 197, 94, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
         }
     </style>
 </head>
@@ -225,26 +229,26 @@
             </div>
 
             <!-- Animated Cleaning Icons -->
-            <div class="floating-item" style="left: 10%; animation-duration: 15s; animation-delay: 0s;">
-                <i data-lucide="sparkles" class="w-12 h-12"></i>
+            <div class="floating-item w-16 h-16" style="left: 10%; animation-duration: 15s; animation-delay: 0s;">
+                <i data-lucide="sparkles" class="w-8 h-8"></i>
             </div>
-            <div class="floating-item" style="left: 25%; animation-duration: 20s; animation-delay: 4s;">
-                <i data-lucide="droplets" class="w-16 h-16"></i>
+            <div class="floating-item w-24 h-24" style="left: 25%; animation-duration: 20s; animation-delay: 4s;">
+                <i data-lucide="droplets" class="w-12 h-12"></i>
             </div>
-            <div class="floating-item" style="left: 40%; animation-duration: 12s; animation-delay: 2s;">
+            <div class="floating-item w-12 h-12" style="left: 40%; animation-duration: 12s; animation-delay: 2s;">
+                <i data-lucide="star" class="w-6 h-6"></i>
+            </div>
+            <div class="floating-item w-20 h-20" style="left: 60%; animation-duration: 18s; animation-delay: 7s;">
+                <i data-lucide="wind" class="w-10 h-10"></i>
+            </div>
+            <div class="floating-item w-28 h-28" style="left: 75%; animation-duration: 22s; animation-delay: 1s;">
+                <i data-lucide="sparkles" class="w-14 h-14 text-primary"></i>
+            </div>
+            <div class="floating-item w-14 h-14" style="left: 85%; animation-duration: 14s; animation-delay: 5s;">
+                <i data-lucide="droplets" class="w-7 h-7"></i>
+            </div>
+            <div class="floating-item w-16 h-16" style="left: 50%; animation-duration: 17s; animation-delay: 9s;">
                 <i data-lucide="star" class="w-8 h-8"></i>
-            </div>
-            <div class="floating-item" style="left: 60%; animation-duration: 18s; animation-delay: 7s;">
-                <i data-lucide="wind" class="w-14 h-14"></i>
-            </div>
-            <div class="floating-item" style="left: 75%; animation-duration: 22s; animation-delay: 1s;">
-                <i data-lucide="sparkles" class="w-20 h-20 text-primary-light"></i>
-            </div>
-            <div class="floating-item" style="left: 85%; animation-duration: 14s; animation-delay: 5s;">
-                <i data-lucide="droplets" class="w-10 h-10"></i>
-            </div>
-            <div class="floating-item" style="left: 50%; animation-duration: 17s; animation-delay: 9s;">
-                <i data-lucide="star" class="w-12 h-12"></i>
             </div>
         </div>
 
