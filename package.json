@@ -2,10 +2,12 @@
   "name": "gdg-personal-practice",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
-    "watch": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+    "watch": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "start": "node server.js",
+    "predeploy": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -22,5 +24,8 @@
   "devDependencies": {
     "@tailwindcss/cli": "^4.2.2",
     "tailwindcss": "^4.2.2"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
   }
 }
