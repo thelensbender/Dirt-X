@@ -1,17 +1,15 @@
-FROM node:18-slim
+FROM node:20-slim
 
 WORKDIR /app
 
-# Install dependencies
 COPY package*.json ./
-RUN npm install
 
-# Copy all source files
+# Delete lock file and reinstall fresh for Linux
+RUN rm -f package-lock.json && npm install
+
 COPY . .
 
-# Build Tailwind CSS
 RUN npm run build
 
-# Start server
 EXPOSE 8080
 CMD ["node", "server.js"]
